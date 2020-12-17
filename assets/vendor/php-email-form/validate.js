@@ -144,16 +144,16 @@
     }).fail( function(data){
       console.log(data);
       var error_msg = "Thank you!<br>";
-//      if(data.statusText || data.status) {
-//        error_msg += 'Status:';
-//       if(data.statusText) {
-//         error_msg += ' ' + data.statusText;
-//        }
-//        if(data.status) {
-//          error_msg += ' ' + data.status;
-//        }
-//        error_msg += '<br>';
-//      }
+      if(data.statusText || data.status) {
+        error_msg += 'Status:';
+       if(data.statusText) {
+         error_msg += ' ' + data.statusText;
+        }
+        if(data.status) {
+          error_msg += ' ' + data.status;
+        }
+        error_msg += '<br>';
+      }
       if(data.responseText) {
         error_msg += data.responseText;
       }
